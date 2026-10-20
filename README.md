@@ -94,6 +94,29 @@ jupyter notebook eda-diabetes.ipynb
 ## Status
 
 - [x] EDA: missing values, target, leakage, distributions, outliers, redundancy
-- [ ] Preprocessing (redundancy pruning, creatinine/eGFR handling, imputation)
+- [x] Preprocessing (redundancy pruning, creatinine/eGFR handling, imputation)
 - [ ] Baselines (logistic regression, RF, XGBoost) with class imbalance handling
 - [ ] Evaluation (macro-F1, per-class recall, AUROC) and feature importance
+
+## Preprocessing (`eda-preprocessing.ipynb`)
+
+`eda-diabetes.ipynb` is the original EDA and is left untouched. `eda-preprocessing.ipynb` is a copy of it, followed by a leak-aware preprocessing section for this dataset only. All preprocessing code lives inside that notebook (cells marked `# [modul]`); there is no separate module.
+
+```bash
+pip install -r requirements.txt
+jupyter nbconvert --to notebook --execute eda-preprocessing.ipynb   # about 2 minutes; writes output/kolom_dibuang.csv and output/fitur_akhir.csv
+```
+
+What it does, in two stages:
+
+1. `prepare()`: fixed rules that use no data statistics (population = people without a prior DM diagnosis, "9 = unknown" to NaN, structural blanks to 0, implausible values to NaN, leaking and derived columns dropped). 5,873 rows x 96 columns.
+2. `StatsCleaner`: statistics fitted on the training fold only (drop mostly-empty columns, rare binary levels, highly correlated pairs; log1p for skewed columns; optional median imputation). 82 columns on the temporal split.
+
+Findings. Everything below is computed by the notebook itself (section "Bukti Kebocoran"); nothing comes from runs outside this repo. The ablation uses two simple models without tuning (HistGradientBoosting and Logistic Regression) and macro-AUC on 5 random folds and on the temporal 70/30 split:
+
+- `VAR00001` and `ThalussemiaAND` are leaks. `VAR00001` equals 9 only when FPG >= 6.1 (none of its 595 nines has FPG < 6.1). `ThalussemiaAND` matches `MCV < 80` AND prediabetes/DM in 99.7% of rows (only 2 NGR people have a 1), so it is derived from the label; the "appears to be filled only for people with abnormal glucose" line above is the original EDA reading. Adding `ThalussemiaAND` back to the base features raises macro-AUC by about 0.08 to 0.11, and `VAR00001` by about 0.12 to 0.17, against a fold-to-fold SD of 0.008 to 0.024.
+- Base features (no leaking columns): macro-AUC 0.712 (HistGradientBoosting) / 0.720 (Logistic Regression) on random 5-fold, 0.655 / 0.674 on the temporal split. The temporal drop can be a harder test block, a time shift, or both; one split cannot separate them.
+- `ThalussemiaOR`, `ThalussemiaHPLC` and `DMhighrisk` are suspicious but not proven leaks. Adding them back changes macro-AUC by at most 0.002, so they stay dropped.
+- Known limits: about 3.8 DM cases per feature (308 DM people, 82 features) and a single dataset without external validation. The main baselines (CatBoost, TabPFN, FT-Transformer) are not run yet.
+
+The "135 candidate features" figure above is the EDA count; the pipeline ends with 96 columns after `prepare()` and 82 after `StatsCleaner`.
