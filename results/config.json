@@ -24,12 +24,13 @@
     "none",
     "class_weight"
   ],
-  "n_train": 4698,
+  "n_train": 4111,
   "versi": {
-    "python": "3.10.12",
-    "sklearn": "1.7.2",
-    "xgboost": "3.2.0",
-    "pandas": "2.3.3",
-    "numpy": "2.2.6"
+    "python": "3.13.18",
+    "sklearn": "1.9.1",
+    "xgboost": "3.4.1",
+    "pandas": "3.0.5",
+    "numpy": "2.5.3",
+    "tabpfn": "10.2.0"
   }
 }

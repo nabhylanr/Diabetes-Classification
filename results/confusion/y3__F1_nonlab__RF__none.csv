@@ -1,4 +1,4 @@
 ,pred_NGR,pred_Prediabetes,pred_DM
-true_NGR,3500.7,46.7,7.7
-true_Prediabetes,863.0,31.0,3.0
-true_DM,225.7,15.7,4.7
+true_NGR,2967.7,44.7,7.7
+true_Prediabetes,804.0,40.0,8.0
+true_DM,203.7,28.3,7.0

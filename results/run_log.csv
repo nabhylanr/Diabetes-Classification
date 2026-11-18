@@ -1,45 +1,75 @@
 run_id,task,feature_set,model,imbalance,status,fold_selesai,fold_target,fold_baru,detik,pesan
-y_dm__cdrs__CDRS__none,y_dm,cdrs,CDRS,none,ok,15,15,0,0.0,
-y_abn__cdrs__CDRS__none,y_abn,cdrs,CDRS,none,ok,15,15,0,0.0,
-y_dm__F1_nonlab__LR__none,y_dm,F1_nonlab,LR,none,ok,15,15,0,0.0,
-y_dm__F1_nonlab__LR__class_weight,y_dm,F1_nonlab,LR,class_weight,ok,15,15,0,0.0,
-y_dm__F2_combined__LR__none,y_dm,F2_combined,LR,none,ok,15,15,0,0.0,
-y_dm__F2_combined__LR__class_weight,y_dm,F2_combined,LR,class_weight,ok,15,15,0,0.0,
-y_abn__F1_nonlab__LR__none,y_abn,F1_nonlab,LR,none,ok,15,15,0,0.0,
-y_abn__F1_nonlab__LR__class_weight,y_abn,F1_nonlab,LR,class_weight,ok,15,15,0,0.0,
-y_abn__F2_combined__LR__none,y_abn,F2_combined,LR,none,ok,15,15,0,0.0,
-y_abn__F2_combined__LR__class_weight,y_abn,F2_combined,LR,class_weight,ok,15,15,0,0.0,
-y3__F1_nonlab__LR__none,y3,F1_nonlab,LR,none,ok,15,15,0,0.0,
-y3__F1_nonlab__LR__class_weight,y3,F1_nonlab,LR,class_weight,ok,15,15,0,0.0,
-y3__F2_combined__LR__none,y3,F2_combined,LR,none,ok,15,15,0,0.0,
-y3__F2_combined__LR__class_weight,y3,F2_combined,LR,class_weight,ok,15,15,0,0.0,
-y_dm__F1_nonlab__RF__none,y_dm,F1_nonlab,RF,none,ok,15,15,0,0.0,
-y_dm__F1_nonlab__RF__class_weight,y_dm,F1_nonlab,RF,class_weight,ok,15,15,0,0.0,
-y_dm__F2_combined__RF__none,y_dm,F2_combined,RF,none,ok,15,15,0,0.0,
-y_dm__F2_combined__RF__class_weight,y_dm,F2_combined,RF,class_weight,ok,15,15,0,0.0,
-y_abn__F1_nonlab__RF__none,y_abn,F1_nonlab,RF,none,ok,15,15,0,0.0,
-y_abn__F1_nonlab__RF__class_weight,y_abn,F1_nonlab,RF,class_weight,ok,15,15,0,0.0,
-y_abn__F2_combined__RF__none,y_abn,F2_combined,RF,none,ok,15,15,0,0.0,
-y_abn__F2_combined__RF__class_weight,y_abn,F2_combined,RF,class_weight,ok,15,15,0,0.0,
-y3__F1_nonlab__RF__none,y3,F1_nonlab,RF,none,ok,15,15,0,0.0,
-y3__F1_nonlab__RF__class_weight,y3,F1_nonlab,RF,class_weight,ok,15,15,0,0.0,
-y3__F2_combined__RF__none,y3,F2_combined,RF,none,ok,15,15,0,0.0,
-y3__F2_combined__RF__class_weight,y3,F2_combined,RF,class_weight,ok,15,15,0,0.0,
-y_dm__F1_nonlab__XGB__none,y_dm,F1_nonlab,XGB,none,ok,15,15,0,0.0,
-y_dm__F1_nonlab__XGB__class_weight,y_dm,F1_nonlab,XGB,class_weight,ok,15,15,0,0.0,
-y_dm__F2_combined__XGB__none,y_dm,F2_combined,XGB,none,ok,15,15,0,0.0,
-y_dm__F2_combined__XGB__class_weight,y_dm,F2_combined,XGB,class_weight,ok,15,15,0,0.0,
-y_abn__F1_nonlab__XGB__none,y_abn,F1_nonlab,XGB,none,ok,15,15,0,0.0,
-y_abn__F1_nonlab__XGB__class_weight,y_abn,F1_nonlab,XGB,class_weight,ok,15,15,0,0.0,
-y_abn__F2_combined__XGB__none,y_abn,F2_combined,XGB,none,ok,15,15,0,0.0,
-y_abn__F2_combined__XGB__class_weight,y_abn,F2_combined,XGB,class_weight,ok,15,15,0,0.0,
-y3__F1_nonlab__XGB__none,y3,F1_nonlab,XGB,none,ok,15,15,0,0.0,
-y3__F1_nonlab__XGB__class_weight,y3,F1_nonlab,XGB,class_weight,ok,15,15,0,0.0,
-y3__F2_combined__XGB__none,y3,F2_combined,XGB,none,ok,15,15,0,0.0,
-y3__F2_combined__XGB__class_weight,y3,F2_combined,XGB,class_weight,ok,15,15,0,0.0,
-y_dm__F1_nonlab__TabPFN__none,y_dm,F1_nonlab,TabPFN,none,error,0,5,0,0.0,ModuleNotFoundError: No module named 'tabpfn'
-y_dm__F2_combined__TabPFN__none,y_dm,F2_combined,TabPFN,none,error,0,5,0,0.0,ModuleNotFoundError: No module named 'tabpfn'
-y_abn__F1_nonlab__TabPFN__none,y_abn,F1_nonlab,TabPFN,none,error,0,5,0,0.0,ModuleNotFoundError: No module named 'tabpfn'
-y_abn__F2_combined__TabPFN__none,y_abn,F2_combined,TabPFN,none,error,0,5,0,0.0,ModuleNotFoundError: No module named 'tabpfn'
-y3__F1_nonlab__TabPFN__none,y3,F1_nonlab,TabPFN,none,error,0,5,0,0.0,ModuleNotFoundError: No module named 'tabpfn'
-y3__F2_combined__TabPFN__none,y3,F2_combined,TabPFN,none,error,0,5,0,0.0,ModuleNotFoundError: No module named 'tabpfn'
+y_dm__cdrs__CDRS__none,y_dm,cdrs,CDRS,none,ok,15,15,15,0.2,
+y_abn__cdrs__CDRS__none,y_abn,cdrs,CDRS,none,ok,15,15,15,0.2,
+y_dm__F1_nonlab__LR__none,y_dm,F1_nonlab,LR,none,ok,15,15,15,2.3,
+y_dm__F1_nonlab__LR__class_weight,y_dm,F1_nonlab,LR,class_weight,ok,15,15,15,2.6,
+y_dm__F2_combined__LR__none,y_dm,F2_combined,LR,none,ok,15,15,15,18.6,
+y_dm__F2_combined__LR__class_weight,y_dm,F2_combined,LR,class_weight,ok,15,15,15,18.8,
+y_abn__F1_nonlab__LR__none,y_abn,F1_nonlab,LR,none,ok,15,15,15,2.6,
+y_abn__F1_nonlab__LR__class_weight,y_abn,F1_nonlab,LR,class_weight,ok,15,15,15,2.6,
+y_abn__F2_combined__LR__none,y_abn,F2_combined,LR,none,ok,15,15,15,16.8,
+y_abn__F2_combined__LR__class_weight,y_abn,F2_combined,LR,class_weight,ok,15,15,15,16.8,
+y3__F1_nonlab__LR__none,y3,F1_nonlab,LR,none,ok,15,15,15,3.2,
+y3__F1_nonlab__LR__class_weight,y3,F1_nonlab,LR,class_weight,ok,15,15,15,3.3,
+y3__F2_combined__LR__none,y3,F2_combined,LR,none,ok,15,15,15,18.2,
+y3__F2_combined__LR__class_weight,y3,F2_combined,LR,class_weight,ok,15,15,15,19.1,
+y_dm__F1_nonlab__RF__none,y_dm,F1_nonlab,RF,none,ok,15,15,15,7.7,
+y_dm__F1_nonlab__RF__class_weight,y_dm,F1_nonlab,RF,class_weight,ok,15,15,15,7.3,
+y_dm__F2_combined__RF__none,y_dm,F2_combined,RF,none,ok,15,15,15,25.8,
+y_dm__F2_combined__RF__class_weight,y_dm,F2_combined,RF,class_weight,ok,15,15,15,22.4,
+y_abn__F1_nonlab__RF__none,y_abn,F1_nonlab,RF,none,ok,15,15,15,7.7,
+y_abn__F1_nonlab__RF__class_weight,y_abn,F1_nonlab,RF,class_weight,ok,15,15,15,8.0,
+y_abn__F2_combined__RF__none,y_abn,F2_combined,RF,none,ok,15,15,15,24.7,
+y_abn__F2_combined__RF__class_weight,y_abn,F2_combined,RF,class_weight,ok,15,15,15,24.7,
+y3__F1_nonlab__RF__none,y3,F1_nonlab,RF,none,ok,15,15,15,8.8,
+y3__F1_nonlab__RF__class_weight,y3,F1_nonlab,RF,class_weight,ok,15,15,15,8.0,
+y3__F2_combined__RF__none,y3,F2_combined,RF,none,ok,15,15,15,26.6,
+y3__F2_combined__RF__class_weight,y3,F2_combined,RF,class_weight,ok,15,15,15,25.5,
+y_dm__F1_nonlab__XGB__none,y_dm,F1_nonlab,XGB,none,ok,15,15,15,4.4,
+y_dm__F1_nonlab__XGB__class_weight,y_dm,F1_nonlab,XGB,class_weight,ok,15,15,15,4.0,
+y_dm__F2_combined__XGB__none,y_dm,F2_combined,XGB,none,ok,15,15,15,20.9,
+y_dm__F2_combined__XGB__class_weight,y_dm,F2_combined,XGB,class_weight,ok,15,15,15,22.1,
+y_abn__F1_nonlab__XGB__none,y_abn,F1_nonlab,XGB,none,ok,15,15,15,4.0,
+y_abn__F1_nonlab__XGB__class_weight,y_abn,F1_nonlab,XGB,class_weight,ok,15,15,15,4.0,
+y_abn__F2_combined__XGB__none,y_abn,F2_combined,XGB,none,ok,15,15,15,22.7,
+y_abn__F2_combined__XGB__class_weight,y_abn,F2_combined,XGB,class_weight,ok,15,15,15,22.0,
+y3__F1_nonlab__XGB__none,y3,F1_nonlab,XGB,none,ok,15,15,15,6.3,
+y3__F1_nonlab__XGB__class_weight,y3,F1_nonlab,XGB,class_weight,ok,15,15,15,6.2,
+y3__F2_combined__XGB__none,y3,F2_combined,XGB,none,ok,15,15,15,31.5,
+y3__F2_combined__XGB__class_weight,y3,F2_combined,XGB,class_weight,ok,15,15,15,31.2,
+y_dm__F1_nonlab__TabPFN__none,y_dm,F1_nonlab,TabPFN,none,error,0,5,0,40.3,"TabPFNHuggingFaceGatedRepoError: HuggingFace authentication error downloading from 'Prior-Labs/tabpfn_3_5'.
+This model is gated and requires you to accept its terms.
+
+Please follow these steps:
+1. Visit https://huggingface.co/Prior-Labs/tabpfn_3_5 in your browser and accept the terms of use.
+2. Log "
+y_dm__F2_combined__TabPFN__none,y_dm,F2_combined,TabPFN,none,error,0,5,0,1.5,"TabPFNHuggingFaceGatedRepoError: HuggingFace authentication error downloading from 'Prior-Labs/tabpfn_3_5'.
+This model is gated and requires you to accept its terms.
+
+Please follow these steps:
+1. Visit https://huggingface.co/Prior-Labs/tabpfn_3_5 in your browser and accept the terms of use.
+2. Log "
+y_abn__F1_nonlab__TabPFN__none,y_abn,F1_nonlab,TabPFN,none,error,0,5,0,0.4,"TabPFNHuggingFaceGatedRepoError: HuggingFace authentication error downloading from 'Prior-Labs/tabpfn_3_5'.
+This model is gated and requires you to accept its terms.
+
+Please follow these steps:
+1. Visit https://huggingface.co/Prior-Labs/tabpfn_3_5 in your browser and accept the terms of use.
+2. Log "
+y_abn__F2_combined__TabPFN__none,y_abn,F2_combined,TabPFN,none,error,0,5,0,1.3,"TabPFNHuggingFaceGatedRepoError: HuggingFace authentication error downloading from 'Prior-Labs/tabpfn_3_5'.
+This model is gated and requires you to accept its terms.
+
+Please follow these steps:
+1. Visit https://huggingface.co/Prior-Labs/tabpfn_3_5 in your browser and accept the terms of use.
+2. Log "
+y3__F1_nonlab__TabPFN__none,y3,F1_nonlab,TabPFN,none,error,0,5,0,0.5,"TabPFNHuggingFaceGatedRepoError: HuggingFace authentication error downloading from 'Prior-Labs/tabpfn_3_5'.
+This model is gated and requires you to accept its terms.
+
+Please follow these steps:
+1. Visit https://huggingface.co/Prior-Labs/tabpfn_3_5 in your browser and accept the terms of use.
+2. Log "
+y3__F2_combined__TabPFN__none,y3,F2_combined,TabPFN,none,error,0,5,0,1.2,"TabPFNHuggingFaceGatedRepoError: HuggingFace authentication error downloading from 'Prior-Labs/tabpfn_3_5'.
+This model is gated and requires you to accept its terms.
+
+Please follow these steps:
+1. Visit https://huggingface.co/Prior-Labs/tabpfn_3_5 in your browser and accept the terms of use.
+2. Log "

@@ -1,0 +1,113 @@
+kolom,alasan,tahap
+Gender,diganti kolom male (1 = laki-laki),prepare
+NO,id / tanggal / target (disimpan terpisah),prepare
+Data,id / tanggal / target (disimpan terpisah),prepare
+PGclass3,id / tanggal / target (disimpan terpisah),prepare
+EscDrinkD,kolom teks,prepare
+EyeDia,kolom teks,prepare
+FPG,bocor: gula darah atau dihitung dari gula darah,prepare
+PG2h,bocor: gula darah atau dihitung dari gula darah,prepare
+GLU,bocor: gula darah atau dihitung dari gula darah,prepare
+HomaIR,bocor: gula darah atau dihitung dari gula darah,prepare
+Homaβ,bocor: gula darah atau dihitung dari gula darah,prepare
+ISIGutt,bocor: gula darah atau dihitung dari gula darah,prepare
+INS2h,bocor: gula darah atau dihitung dari gula darah,prepare
+CP2h,bocor: gula darah atau dihitung dari gula darah,prepare
+FINS,bocor: gula darah atau dihitung dari gula darah,prepare
+FCP,bocor: gula darah atau dihitung dari gula darah,prepare
+FPGover7,bocor: gula darah atau dihitung dari gula darah,prepare
+P2PGover11,bocor: gula darah atau dihitung dari gula darah,prepare
+HbA1c,tes gula darah lain,prepare
+HPLC,tes gula darah lain,prepare
+GA,tes gula darah lain,prepare
+A1cover6575,tes gula darah lain,prepare
+DM,label atau turunan label,prepare
+DMnew3class,label atau turunan label,prepare
+PGclass6,label atau turunan label,prepare
+DMhis,label atau turunan label,prepare
+filter,penanda subjek studi,prepare
+GAstudy,penanda subjek studi,prepare
+GAnum,penanda subjek studi,prepare
+DF,komplikasi diabetes (setelah diagnosis),prepare
+MADPN,komplikasi diabetes (setelah diagnosis),prepare
+TFDPN,komplikasi diabetes (setelah diagnosis),prepare
+DR,komplikasi diabetes (setelah diagnosis),prepare
+DRyd,komplikasi diabetes (setelah diagnosis),prepare
+Known,"kuesioner kesadaran diabetes, mayoritas tidak tahu",prepare
+OPD,"kuesioner kesadaran diabetes, mayoritas tidak tahu",prepare
+ToChilren,"kuesioner kesadaran diabetes, mayoritas tidak tahu",prepare
+DietExcise,"kuesioner kesadaran diabetes, mayoritas tidak tahu",prepare
+Compl,"kuesioner kesadaran diabetes, mayoritas tidak tahu",prepare
+Check,"kuesioner kesadaran diabetes, mayoritas tidak tahu",prepare
+GlucoseLev,"kuesioner kesadaran diabetes, mayoritas tidak tahu",prepare
+VAR00001,"bocor: bernilai 9 hanya bila FPG >= 6,1 (69% dari FPG >= 6,1; tidak pernah pada FPG < 6,1)",prepare
+ThalussemiaAND,"bocor: bernilai 1 bila MCV < 80 DAN glukosa abnormal (kelas >= 1); 99,7% cocok",prepare
+SmokingAge,"kosong struktural, informasi ada di kolom penyaring",prepare
+DrinkingAge,"kosong struktural, informasi ada di kolom penyaring",prepare
+EscDrink,"kosong struktural, informasi ada di kolom penyaring",prepare
+EscDrinkM,"kosong struktural, informasi ada di kolom penyaring",prepare
+EscDrinkT,"kosong struktural, informasi ada di kolom penyaring",prepare
+EscDrinkR,"kosong struktural, informasi ada di kolom penyaring",prepare
+EscDrinkO,"kosong struktural, informasi ada di kolom penyaring",prepare
+ThalussemiaOR,"ditahan: turunan hitung darah (MCV < 80), redundan dengan MCV/MCH",prepare
+ThalussemiaHPLC,"ditahan: bendera 1/kosong, hampir semua kosong; manfaat belum jelas",prepare
+DMhighrisk,"ditahan: komposit risiko, definisi tidak ada di kamus",prepare
+BMI4Class,turunan kategori dari versi numerik (BMI),prepare
+overweight,turunan kategori dari versi numerik (BMI),prepare
+obesity,turunan kategori dari versi numerik (BMI),prepare
+BMI25,turunan kategori dari versi numerik (BMI),prepare
+WGOCobBMI,turunan kategori dari versi numerik (BMI),prepare
+WC9085,turunan kategori dari versi numerik (lingkar pinggang),prepare
+WC8580,turunan kategori dari versi numerik (lingkar pinggang),prepare
+WC9080,turunan kategori dari versi numerik (lingkar pinggang),prepare
+Fat2Class,turunan kategori dari versi numerik (lemak tubuh),prepare
+Fat3Class,turunan kategori dari versi numerik (lemak tubuh),prepare
+Age3Group,turunan kategori dari versi numerik (umur),prepare
+AgeGroup,turunan kategori dari versi numerik (umur),prepare
+BP13085,turunan kategori dari versi numerik (tekanan darah),prepare
+WHO1999hbp,turunan kategori dari versi numerik (tekanan darah),prepare
+TGdis,turunan kategori dari versi numerik (lipid),prepare
+DysHDLIDFNCEP,turunan kategori dari versi numerik (lipid),prepare
+JCDHDLdis,turunan kategori dari versi numerik (lipid),prepare
+CDSdyelip,turunan kategori dari versi numerik (lipid),prepare
+ALTn,turunan kategori dari versi numerik (hati),prepare
+TBILn,turunan kategori dari versi numerik (hati),prepare
+FIB4n,turunan kategori dari versi numerik (hati),prepare
+highCr,turunan kategori dari versi numerik (ginjal),prepare
+HighUA,turunan kategori dari versi numerik (ginjal),prepare
+HighUmALB,turunan kategori dari versi numerik (ginjal),prepare
+ACR3degree,turunan kategori dari versi numerik (ginjal),prepare
+HighACR,turunan kategori dari versi numerik (ginjal),prepare
+GFR5lev,turunan kategori dari versi numerik (ginjal),prepare
+GFR6levG5,turunan kategori dari versi numerik (ginjal),prepare
+EUGFRabACR012,turunan kategori dari versi numerik (ginjal),prepare
+EUGFR90UACR01,turunan kategori dari versi numerik (ginjal),prepare
+EUGFR60abACR012,turunan kategori dari versi numerik (ginjal),prepare
+UACRGFR,turunan kategori dari versi numerik (ginjal),prepare
+DN,turunan kategori dari versi numerik (ginjal),prepare
+Hb4per,turunan kategori dari versi numerik (darah),prepare
+Anemia,turunan kategori dari versi numerik (darah),prepare
+Smoking2,turunan kategori dari versi numerik (perilaku),prepare
+Drinking2,turunan kategori dari versi numerik (perilaku),prepare
+ALT.1,duplikat: akar kuadrat dari ALT,prepare
+GLO,turunan aritmetika: TP - ALB,prepare
+AG,turunan aritmetika: ALB / GLO,prepare
+IDBIL,turunan aritmetika: TBIL - DBIL,prepare
+FatherDM,"jawaban mentah per kerabat, diringkas oleh DMfamilyHistory",prepare
+MotherDM,"jawaban mentah per kerabat, diringkas oleh DMfamilyHistory",prepare
+BSDM,"jawaban mentah per kerabat, diringkas oleh DMfamilyHistory",prepare
+ChildDM,"jawaban mentah per kerabat, diringkas oleh DMfamilyHistory",prepare
+CDSMS,kosong semua,prepare
+PLCR,kosong 78% (> 50%),stats_cleaner (bagian latih)
+Drink50g,kosong 52% (> 50%),stats_cleaner (bagian latih)
+Cancer,kosong 100% (> 50%),stats_cleaner (bagian latih)
+HCVAb,biner terlalu jarang (minoritas = 6),stats_cleaner (bagian latih)
+PAD,biner terlalu jarang (minoritas = 7),stats_cleaner (bagian latih)
+CerebralHe,biner terlalu jarang (minoritas = 4),stats_cleaner (bagian latih)
+TIA,biner terlalu jarang (minoritas = 6),stats_cleaner (bagian latih)
+MI,biner terlalu jarang (minoritas = 2),stats_cleaner (bagian latih)
+HF,biner terlalu jarang (minoritas = 5),stats_cleaner (bagian latih)
+CAP,biner terlalu jarang (minoritas = 3),stats_cleaner (bagian latih)
+Hypo14,biner terlalu jarang (minoritas = 8),stats_cleaner (bagian latih)
+Amputation,biner terlalu jarang (minoritas = 3),stats_cleaner (bagian latih)
+LC,|rho| = 0.981 dengan LCcount,stats_cleaner (bagian latih)
