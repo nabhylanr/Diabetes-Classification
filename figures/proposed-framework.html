@@ -1,0 +1,98 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Proposed Framework</title>
+<style>
+:root{--ink:#222;--muted:#5a5a5a;--grey:#F0F0F0;--cream:#FBE6C8;--creamB:#E5B566;--green:#D9E8D3;--blue:#DCE6F8;--yellow:#FBF0CC;--dash:#C9C9C9;--red:#F9E1DE;--redB:#D98C82}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;font-family:Poppins,Inter,sans-serif;color:var(--ink)}
+#c{position:relative;width:1900px;height:560px;background:#fff}
+.b{position:absolute;border-radius:14px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:6px 10px;font-size:12px;line-height:1.35}
+.g{background:var(--grey)}
+.cr{background:var(--cream);border:1.5px solid var(--creamB)}
+.gr{background:var(--green)}
+.bl{background:var(--blue)}
+.ye{background:var(--yellow)}
+.dsh{background:#fff;border:1.6px dashed var(--dash)}
+.box{background:#FAFAFA;border:1.6px dashed var(--dash);border-radius:22px;justify-content:flex-start;padding-top:14px}
+.rd{background:var(--red);border:1.6px dashed var(--redB)}
+.wh{background:#fff;border:1.5px solid #333;border-radius:10px}
+.t{font-weight:500;font-size:13.5px}
+.t2{font-weight:500;font-size:15.5px;margin-bottom:2px}
+.s{font-size:11.2px;color:var(--muted);margin-top:2px}
+b{font-weight:600}
+.badge{display:inline-block;font-size:10px;font-weight:600;padding:0 7px;border-radius:20px;background:#fff;border:1.3px solid #333;margin-left:5px;vertical-align:1px}
+.bR{border-color:#C0645A;color:#B0554B}
+.num{display:inline-flex;width:20px;height:20px;border-radius:50%;background:#333;color:#fff;font-size:11px;font-weight:600;align-items:center;justify-content:center;margin-right:6px}
+.chips{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin-top:6px}
+.chip{background:#fff;border:1.2px solid #444;border-radius:8px;padding:2px 8px;font-size:11.2px}
+svg{position:absolute;left:0;top:0;z-index:5;pointer-events:none}
+</style></head><body><div id="c">
+
+
+<!-- 1 Dataset -->
+<div class="b cr" style="left:20px;top:20px;width:200px;height:120px"><div class="t2"><span class="num">1</span>Dataset</div><div class="s">Li et al., <i>Sci. Data</i> 2026</div><div class="s">5.922 orang × 190 kolom</div><div class="s">NGR · Prediabetes · DM</div></div>
+<div class="b g" style="left:20px;top:152px;width:200px;height:62px"><div class="t">Demografi &amp; Antropometri</div></div>
+<div class="b g" style="left:20px;top:224px;width:200px;height:62px"><div class="t">Tensi &amp; Gaya Hidup</div></div>
+<div class="b bl" style="left:20px;top:296px;width:200px;height:62px"><div class="t">Lab Rutin Non-Glikemik</div><div class="s">lipid, hati, ginjal, darah</div></div>
+<div class="b rd" style="left:20px;top:390px;width:200px;height:62px"><div class="t">Glikemik</div><div class="s" style="color:#B0554B">hanya untuk label</div></div>
+
+<!-- 2 EDA -->
+<div class="b box" style="left:248px;top:20px;width:192px;height:520px"><div class="t2"><span class="num">2</span>EDA</div></div>
+<div class="b dsh" style="left:262px;top:72px;width:164px;height:72px"><div class="t">Missing Value</div></div>
+<div class="b dsh" style="left:262px;top:154px;width:164px;height:72px"><div class="t">Distribusi Target</div><div class="s">imbalance ≈ 14 : 1</div></div>
+<div class="b rd" style="left:262px;top:236px;width:164px;height:72px"><div class="t">Cek Leakage</div></div>
+<div class="b dsh" style="left:262px;top:318px;width:164px;height:72px"><div class="t">Outlier</div></div>
+<div class="b dsh" style="left:262px;top:400px;width:164px;height:72px"><div class="t">Redundansi</div></div>
+
+<!-- 3 Cleaning -->
+<div class="b box" style="left:466px;top:20px;width:200px;height:520px"><div class="t2"><span class="num">3</span>Cleaning</div><div class="s">sebelum split</div></div>
+<div class="b dsh" style="left:480px;top:90px;width:172px;height:80px"><div class="t">Seleksi Subjek</div><div class="s">tanpa riwayat DM</div><div class="s">n = 5.873</div></div>
+<div class="b dsh" style="left:480px;top:180px;width:172px;height:80px"><div class="t">Perbaiki Nilai</div><div class="s">recode · outlier → NaN</div></div>
+<div class="b rd" style="left:480px;top:270px;width:172px;height:80px"><div class="t">Leakage Removal</div><div style="margin-top:4px"><span class="badge bR" style="margin:0">RQ2</span></div></div>
+<div class="b dsh" style="left:480px;top:360px;width:172px;height:80px"><div class="t">Seleksi Kolom</div><div class="s">kosong &gt; 50% · redundan</div></div>
+
+<!-- 4 Split -->
+<div class="b ye" style="left:692px;top:170px;width:184px;height:220px"><div class="t2"><span class="num">4</span>Split <span class="badge">RQ2</span></div><div class="s">stratified 80 : 20</div>
+ <div class="chips" style="flex-direction:column;align-items:center;gap:6px;margin-top:10px"><span class="chip"><b>Train</b> · 5-fold CV</span><span class="chip"><b>Test</b> · dikunci</span></div></div>
+
+<!-- 5 Preprocessing -->
+<div class="b box" style="left:902px;top:20px;width:186px;height:520px"><div class="t2"><span class="num">5</span>Preprocessing</div><div class="s">fit di train saja</div></div>
+<div class="b dsh" style="left:916px;top:180px;width:158px;height:80px"><div class="t">Imputasi</div><div class="s">median</div></div>
+<div class="b dsh" style="left:916px;top:270px;width:158px;height:80px"><div class="t">Scaling</div><div class="s">standard (LR)</div></div>
+
+<!-- 6 Modeling -->
+<div class="b box" style="left:1114px;top:20px;width:200px;height:520px"><div class="t2"><span class="num">6</span>Modeling</div></div>
+<div class="b wh" style="left:1130px;top:110px;width:168px;height:66px"><div class="t">Logistic Regression</div><div class="s">baseline statistik</div></div>
+<div class="b wh" style="left:1130px;top:188px;width:168px;height:66px"><div class="t">Random Forest</div><div class="s">machine learning</div></div>
+<div class="b wh" style="left:1130px;top:266px;width:168px;height:66px"><div class="t">XGBoost</div><div class="s">machine learning</div></div>
+<div class="b wh" style="left:1130px;top:344px;width:168px;height:66px;background:#F4F8F2"><div class="t">TabPFN</div><div class="s">tabular foundation model</div></div>
+
+<!-- 7 Experiments -->
+<div class="b box" style="left:1340px;top:20px;width:268px;height:520px"><div class="t2"><span class="num">7</span>Eksperimen</div></div>
+<div class="b bl" style="left:1354px;top:62px;width:240px;height:130px"><div class="t">Fitur <span class="badge">RQ1</span></div>
+ <div class="chips"><span class="chip"><b>F1</b> Non-lab</span><span class="chip"><b>F2</b> Combined</span></div><div class="s">F2 = F1 + lab rutin</div></div>
+<div class="b bl" style="left:1354px;top:216px;width:240px;height:132px"><div class="t">Ketidakseimbangan Kelas</div>
+ <div class="chips"><span class="chip">Baseline</span><span class="chip">Class Weight</span><span class="chip">SMOTE</span><span class="chip">RUS</span></div><div class="s">pada feature set terpilih</div></div>
+<div class="b bl" style="left:1354px;top:372px;width:240px;height:148px"><div class="t">Perbandingan Model <span class="badge">RQ3</span></div>
+ <div class="chips"><span class="chip">LR</span><span class="chip">RF</span><span class="chip">XGBoost</span><span class="chip">TabPFN</span></div><div class="s">fitur &amp; strategi terpilih</div></div>
+
+<!-- 8 Evaluation -->
+<div class="b gr" style="left:1634px;top:140px;width:246px;height:280px"><div class="t2"><span class="num">8</span>Evaluasi</div><div class="s">pada test set</div>
+ <div class="chips" style="margin-top:12px"><span class="chip">Macro-F1</span><span class="chip">Balanced Acc.</span><span class="chip">AUROC (OvR)</span><span class="chip">Recall per kelas</span></div>
+ <div class="s" style="margin-top:14px">Interpretasi: SHAP</div></div>
+
+<svg width="1900" height="560">
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2b2b2b"/></marker></defs>
+ <g fill="none" stroke="#2b2b2b" stroke-width="1.4">
+  <path d="M220,183 H234 M220,255 H234 M220,327 H234 M220,421 H234 M234,183 V421"/>
+  <path d="M234,280 H246" marker-end="url(#a)"/>
+  <path d="M440,280 H464" marker-end="url(#a)"/>
+  <path d="M666,280 H690" marker-end="url(#a)"/>
+  <path d="M876,280 H900" marker-end="url(#a)"/>
+  <path d="M1088,280 H1112" marker-end="url(#a)"/>
+  <path d="M1314,280 H1338" marker-end="url(#a)"/>
+  <path d="M1608,280 H1632" marker-end="url(#a)"/>
+  <path d="M1474,192 V214" marker-end="url(#a)"/>
+  <path d="M1474,348 V370" marker-end="url(#a)"/>
+ </g>
+</svg>
+</div></body></html>

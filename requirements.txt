@@ -4,6 +4,9 @@ matplotlib
 seaborn
 scipy
 scikit-learn
+xgboost
+joblib
+tabpfn
 python-docx
 openpyxl
 jupyter

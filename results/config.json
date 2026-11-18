@@ -1,0 +1,35 @@
+{
+  "random_state": 42,
+  "n_splits": 5,
+  "n_repeats": 3,
+  "repeats_per_model": {
+    "TabPFN": 1
+  },
+  "tasks": [
+    "y_dm",
+    "y_abn",
+    "y3"
+  ],
+  "feature_sets": [
+    "F1_nonlab",
+    "F2_combined"
+  ],
+  "models": [
+    "LR",
+    "RF",
+    "XGB",
+    "TabPFN"
+  ],
+  "imbalance": [
+    "none",
+    "class_weight"
+  ],
+  "n_train": 4698,
+  "versi": {
+    "python": "3.10.12",
+    "sklearn": "1.7.2",
+    "xgboost": "3.2.0",
+    "pandas": "2.3.3",
+    "numpy": "2.2.6"
+  }
+}
